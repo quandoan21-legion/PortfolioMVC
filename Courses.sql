@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 28, 2024 at 01:02 PM
+-- Generation Time: Sep 28, 2024 at 03:38 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,43 +18,52 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `v_store`
+-- Database: `Courses`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `item_sale`
+-- Table structure for table `Courses`
 --
 
-CREATE TABLE `item_sale` (
-  `id` int(11) NOT NULL,
-  `item_code` varchar(6) NOT NULL,
-  `item_name` varchar(50) NOT NULL,
-  `quantity` decimal(10,0) NOT NULL,
-  `expried_date` date NOT NULL,
-  `note` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `Courses` (
+  `ID` int(20) NOT NULL,
+  `CourseName` varchar(200) NOT NULL,
+  `Certificate` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `Courses`
+--
+
+INSERT INTO `Courses` (`ID`, `CourseName`, `Certificate`) VALUES
+(72, 'he he ', '321'),
+(74, 'cs50P', '123'),
+(76, 'quandsda', 'quandoan21'),
+(78, 'CS50P', 'DONE'),
+(79, 'CS50P', 'lmao lmao '),
+(80, 'Quandoan21', 'DONE');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `item_sale`
+-- Indexes for table `Courses`
 --
-ALTER TABLE `item_sale`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `Courses`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `item_sale`
+-- AUTO_INCREMENT for table `Courses`
 --
-ALTER TABLE `item_sale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `Courses`
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
